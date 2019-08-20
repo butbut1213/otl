@@ -1,0 +1,16 @@
+
+
+html {
+  margin: 0;
+  background-size: initial;
+  background: url("http://192.168.1.64/src/img/lam-1.jpg") no-repeat center center fixed;
+  background-blend-mode: darken;
+  -webkit-transition: 3s;
+  transition: 3s;
+  position: fixed;
+  overflow-y:fixed;
+  width: 100%;
+
+}
+
+

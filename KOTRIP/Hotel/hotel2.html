@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="../styles/inline.css">
+		  <link rel="stylesheet" type="text/css" href="../styles/slider.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UK Trip">
+  <link rel="apple-touch-icon" href="../images/icons/icon-152x152.png">
+  <link href="../styles/hotel.css" rel="stylesheet" type="text/css">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<style>  .swiper-container {
+      width: 100%;
+      height: 50%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color:#000;
+      opacity: 1;
+      background: rgba(0,0,0,0.2);
+    }
+    .swiper-pagination-bullet-active {
+      color:#fff;
+      background: #007aff;
+	
+    }
+	
+	
+	
+	info_title{
+		position: absolute;
+		left:16px;
+		top:26px;
+		font-size:22px;
+	  font-weight:bold; 
+	}
+	info{
+		
+		position: absolute;
+		left:16px;
+		top:66px;
+		font-size:16px;
+	     
+		text-align: left;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="../styles/inline.css">
+		  <link rel="stylesheet" type="text/css" href="../styles/slider.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UK Trip">
+  <link rel="apple-touch-icon" href="../images/icons/icon-152x152.png">
+  <link href="../styles/hotel.css" rel="stylesheet" type="text/css">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<style>  .swiper-container {
+      width: 100%;
+      height: 50%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color:#000;
+      opacity: 1;
+      background: rgba(0,0,0,0.2);
+    }
+    .swiper-pagination-bullet-active {
+      color:#fff;
+      background: #007aff;
+	
+    }
+	
+	
+	
+	info_title{
+		position: absolute;
+		left:16px;
+		top:26px;
+		font-size:22px;
+	  font-weight:bold; 
+	}
+	info{
+		
+		position: absolute;
+		left:16px;
+		top:66px;
+		font-size:16px;
+	     
+		text-align: left;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+
+
+ 
+
+ <header class="header">
+    <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input type="image" height ="30px" src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title" style="font-size: 26px;">肯尼故事酒店</h1>
+	  <br>
+ <h2 class="flight_number">Accommodation</h2>
+  </header>
+
+  <main class="main">
+	  
+  <div style="  
+  margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> FRI-SAT, 5-6 JUL
+			  </div>
+<table>
+
+<tr><td colspan="2" style="padding: 90px;">
+	<activity_title style=" width:100%;">肯尼故事酒店(호텔 케니스토리)</activity_title>
+	<location_logo><img src="/images/location.png"></img></location_logo><location><a href="http://naver.me/Gzusa65M">제주특별자치도 서귀포시 서귀동 308-2</a></location>
+	<gmap_location_logo><img src="/images/location.png"></img></gmap_location_logo><gmap_location><a href="https://goo.gl/maps/zHSf9nCxg9U2">308-2 Seogwi-dong, Seogwipo, Jeju-do</a></gmap_location>
+	<phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a href="tel:+82 64 760 5000">+82 64 760 5000</a></phone>
+	
+	  
+	  </td></tr>
+	
+	
+   <time_tr>
+    <td >
+		<depart>Check in time</depart>
+			<time>15:00</time> 
+		
+		
+
+	   </td> 
+    <td>
+			<depart>Check out time</depart>
+					<time_holder><time>11:00</time></time_holder> 
+		
+
+    </td>
+	</time_tr>
+
+
+
+	</table>
+
+<br>
+
+
+<!-- sliderr -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://q-ak.bstatic.com/xdata/images/hotel/max1024x768/144278136.webp?k=673fd551e30e272d604897e4d2ed734c5ad84f4a1a8eeaf1f35aac482c47363f&o=" style="width: 100%"  />
+</div>
+      <div class="swiper-slide"><img data-u="image" src="https://r-ak.bstatic.com/xdata/images/hotel/max1024x768/144278127.webp?k=44babaf4b9ed3e7bce511de228c8f14e62df5c784fab88bac449a38b3e25532f&o=" style="width: 100%"  />
+</div>
+      <div class="swiper-slide"><img data-u="image" src="https://q-ak.bstatic.com/xdata/images/hotel/max1024x768/144277893.webp?k=ddf30087c73ba1bab9de9dbdcc15fb2dca45e5615bb35b9d323d733b7fc73d7b&o=" style="width: 100%" /></div>
+ 
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  </script>
+		
+<!-- #endregion Jssor Slider End -->
+
+
+
+
+
+
+  </main>
+
+ 
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="../hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+
+</body>
+</html>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  </script>
+		
+<!-- #endregion Jssor Slider End -->
+
+
+
+
+
+
+  </main>
+
+ 
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="../hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UK Trip">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+	<style>
+
+		time{
+		position: absolute; top: 50px;
+  left: 0px;
+ 	 width: 100%;
+  height: 50px;
+			   font-size: 250%;
+			 text-align: center;
+		}
+		
+			pm_holder{   position: absolute; top: 50px;
+  left:70px;
+ width: 100%;
+  height: 20px;
+ text-align: center;
+  }
+		pm{
+			
+			   font-size: 80%;
+		}
+		
+					timezone_holder{   position: absolute; top: 70px;
+  left: 72px;
+text-align: center;
+  height: 20px;
+  width: 100%;
+  }
+		timezone{
+			
+			   font-size: 80%;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	dest{position: absolute; top: 35px;
+  left: 220px;
+  width: 150px;
+  height: 20px;
+ }
+		back_btn{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+		  
+ 
+		background: url("/images/back-icon.png") center center no-repeat;}
+		
+				points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url(/images/points_rev.png) center center no-repeat;}
+
+					points_end{position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url(/images/point_end.png) center center no-repeat;}
+	
+table, th, td {
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+
+ position: relative;
+  padding: 83px;
+	 background:white;
+	
+		
+		}
+		table2 {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+   td2 {
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+
+  padding: 40px;
+	 background:white;
+	
+		
+		}		
+		
+		duration {
+			 border: 1px solid #dddddd;
+  border-collapse: collapse;
+background:white;
+ position: relative;
+		padding: 150px;	
+			
+		}
+		
+		.header{
+			padding: 75px 5px 0 5px;		
+		}
+		
+		.header__title{
+			
+			margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 200;
+  font-size: 30px;
+  margin: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;	
+	width: 100%;		
+			
+	text-align: center		
+		}
+		.flight_number{
+			 margin: 0;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 200;
+  font-size: 25px;
+  margin: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;	
+		}
+		
+		.main {
+  padding-top: 130px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;   
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
+		
+			depart{   position: absolute; top: 18px;
+  left: 0px;
+  width: 100%;
+  height: 20px;
+				font-size: 15px;
+				font-weight:bold;
+				text-align: center;
+  }
+		
+					terminal_title{   position: absolute; top: 110px;
+  left: -45px;
+  width: 100%;
+  height: 20px;
+				font-size: 13px;
+				font-weight:bold;
+				text-align: center;
+						colour:#e5e5e5;
+  }
+		terminal{   position: absolute; top: 135px;
+  left: -70px;
+  width: 100%;
+  height: 20px;
+				font-size: 13px;
+				font-weight:50%;
+				text-align: center;
+  }
+		
+		flight_duration_title{   position: absolute; top: 15px;
+  left: 0px;
+  width: 100%;
+  height: 20px;
+				font-size: 13px;
+				font-weight:bold;
+				text-align: center;
+			colour:#e5e5e5;
+  }
+		
+			flight_duration{   position: absolute; top: 35px;
+  left: 0px;
+  width: 100%;
+  height: 20px;
+				font-size: 13px;
+				font-weight:50%;
+				text-align: center;
+				
+  }
+		check_in_title{   position: absolute; top: 15px;
+  left: -130px;
+  width: 100%;
+  height: 20px;
+				font-size: 13px;
+				font-weight:bold;
+				text-align: center;
+			colour:#e5e5e5;
+  }
+		
+			check_in{   position: absolute; top: 35px;
+  left: -130px;
+  width: 100%;
+  height: 20px;
+				font-size: 13px;
+				font-weight:50%;
+				text-align: center;
+				
+  }
+	</style>
+</head>
+<body>
+
+
+
+
+  <header class="header">
+    <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input type="image" height="30px" src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">HKG - CJU</h1>
+	  <br>
+ <h2 class="flight_number">UO 676</h2>
+  </header>
+
+  <main class="main">
+	  
+  <div style="  
+  margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> MON, 4 JUL
+			  </div>
+<table>
+
+
+   <time_tr>
+    <td>
+		<depart>Depart HONG KONG</depart>
+			<time_holder><time>02:15</time></time_holder> 
+		<pm_holder><pm>AM</pm></pm_holder>
+		<timezone_holder><timezone>HKT</timezone></timezone_holder>
+	   <terminal_title><font color="#b2b2b2"> TERMINAL </font></terminal_title>
+		<terminal>T2</terminal>
+	   </td> 
+    <td>
+			<depart>Arrival Jeju</depart>
+					<time_holder><time>06:20</time></time_holder> 
+		<pm_holder><pm>AM</pm></pm_holder>
+		<timezone_holder><timezone>KST</timezone></timezone_holder>
+		   <terminal_title><font color="#b2b2b2"> TERMINAL </font></terminal_title>
+		<terminal>T1</terminal>
+    </td>
+	</time_tr>
+<tr><td colspan="2" style="padding: 30px;">
+	<font color="#b2b2b2"><check_in_title>CHECK IN</check_in_title></font>
+	<check_in>Aisle P </check_in>
+	<font color="#b2b2b2"><flight_duration_title>DURATION</flight_duration_title></font>
+		<flight_duration>4hrs 5mins</flight_duration>
+	
+	</td></tr>
+</table>
+  </main>
+
+ 
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+
+</body>
+</html>

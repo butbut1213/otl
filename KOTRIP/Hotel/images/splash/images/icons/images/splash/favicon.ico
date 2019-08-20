@@ -1,0 +1,1426 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/icon-144x144.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/icon-144x144.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Korea Trip">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-startup-image" href="images/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-144x144.png">
+  <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#6F6F6F">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+	  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+
+
+<style>
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 96%;
+	width: 100%;}
+time{   position: absolute; top: 32px;
+  left: 0px;
+  width: 100px;
+  height: 20px;
+		    text-align: center;
+  }
+	dest{position: absolute; top: 30px;
+  left: 220px;
+  width: 160px;
+  height: 20px;
+ }
+		plane_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+
+
+		background: url("/images/plane_points.png") center center no-repeat;}
+
+		act_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+
+
+		background: url("/images/act_points.png") center center no-repeat;}
+			transport_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+
+
+		background: url("/images/transpoort_points.png") center center no-repeat;}
+					food_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+
+
+		background: url("/images/food_points.png") center center no-repeat;}
+
+				act_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/act_points_rev.png") center center no-repeat;}
+
+					plane_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/plane_points_rev.png") center center no-repeat;}
+					transport_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/transport_points_rev.png") center center no-repeat;}
+
+		food_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/food_points_rev.png") center center no-repeat;}
+
+		hotel_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/hotel_points_rev.png") center center no-repeat;}
+					plane_points_end{position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/act_point_end.png") center center no-repeat;}
+					transport_points_end{position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/act_point_end.png") center center no-repeat;}
+
+					act_points_end{position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/act_point_end.png") center center no-repeat;}
+
+		food_points_end{
+
+			position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/food_point_end.png") center center no-repeat;
+
+
+		}
+   distance_up{
+
+			position: absolute; top: -32px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/distance_down3.png") center center no-repeat;
+
+
+		}
+		distance_down{
+
+			position: absolute; top: 32px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+
+
+		background: url("/images/distance_down2.png") center center no-repeat;
+
+
+		}
+
+
+dot {
+    display: block;
+
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 100%;
+  background: rgba(255,255,255,0.7);
+  box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 10px 2px rgba(0,255,135,0.3);
+  -webkit-animation: pulse 1s alternate infinite;
+  -moz-animation: pulse 1s alternate infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    background: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 5px 2px rgba(0,255,135,0.3);
+  }
+  100% {
+    background: rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 15px 2px rgba(0,255,135,1);
+  }
+}
+
+@-moz-keyframes pulse {
+  0% {
+    background: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 5px 2px rgba(0,255,135,0.3);
+  }
+  100% {
+    background: rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 15px 2px rgba(0,255,135,1);
+  }
+}
+
+
+
+
+
+	</style>
+
+<style>
+.hidden {
+ display: none;
+}
+
+
+
+
+	</style>
+
+</head>
+<body>
+<div class="timeit"  data-end="2019-07-03 18:00">
+  <header class="header">
+    <h1 class="header__title">Home</h1>
+
+  </header>
+
+  <main class="main">
+
+	  <div class="card">
+
+
+
+
+			  <div style="padding: 0px;"><div style="   margin: 0 auto;
+  width: 320px;
+  height: 135px; ">
+<iframe src="https://free.timeanddate.com/countdown/i6n2cn4h/n102/cf110/cm0/cu4/ct0/cs1/ca0/co1/cr0/ss0/cac000/cpc000/pca0bfd5/tcfff/fs200/szw320/szh135/tatGoing%20to%20Korea%20in%20/tac000/tptTime%20since%20Event%20started%20in/tpc000/iso2019-07-04T00:00:00" allowTransparency="true" frameborder="0" width="320" height="135"></iframe>
+
+</div>
+
+
+
+</div></div>
+
+
+
+
+
+
+
+
+
+
+  </main>
+</div>
+
+	<!-- day 1-->
+
+<div class="timeit" data-start="2019-07-04 00:00" data-end="2019-07-04 23:59">
+
+
+  <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 1 濟州島 - 濟州市</h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+  <tr>
+    <td>
+		<time>06:20</time>
+	<distance_down></distance_down>
+		<plane_points></plane_points>
+		<a href="/hk_flight_1.html"><dest>Arriving Jeju</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>10 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity1.html"><dest>龍頭岩(용두암)</dest></a>
+    </td>
+	</tr>
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>13 mins</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day1/activity2.html"><dest>Running Man豬肉湯麵</dest></a>
+    </td>
+	</tr>
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>32 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/activity3.html"><dest>思連伊林蔭道</dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>27 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity4.html"><dest>백약이 오름</dest></a>
+    </td>
+	</tr>
+
+
+		 <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>40 mis</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day1/activity5.html"><dest>東門市場</dest></a>
+    </td>
+	</tr>
+
+		<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>54 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity6.html"><dest>月汀里</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>8 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity7.html"><dest>萬丈窟</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+		<distance_up></distance_up>
+
+		<time>35 mins</time>
+		<hotel_points_end></hotel_points_end>
+		<a href="/Hotel/hotel1.html"><dest>城山合作城市酒店</dest></a>
+    </td>
+	</tr>
+</table>
+
+  </main>
+
+
+</div>
+
+
+	<!-- day 2-->
+	<div class="timeit" data-start="2019-07-05 00:00" data-end="2019-07-05 23:59">
+	<header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 2 濟州島 - 城山</h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+
+	 <tr>
+    <td>
+		<time>04:30 AM</time>
+	<distance_down></distance_down>
+		<hotel_points></hotel_points>
+		<dest>城山合作城市酒店</dest>
+    </td>
+	</tr>
+
+
+  <tr>
+    <td>
+		<distance_up></distance_up>
+		<time>4 mins</time>
+	<distance_down></distance_down>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity1.html"><dest>城山日出峰日出</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>13 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity2.html"><dest>涉地可支</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>13 mins</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day2/activity3.html"><dest>京美家(경미네집)</dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>36 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity4.html"><dest>Maze Land
+</dest></a>
+    </td>
+	</tr>
+
+
+		 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>1hr 6mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity5.html"><dest>牛沼端</dest></a>
+    </td>
+	</tr>
+
+		<tr>
+    <td>
+		<distance_up></distance_up>
+<distance_down></distance_down>
+		<time>17 mins</time>
+	<hotel_points_rev></hotel_points_rev>
+		<a href="/activity/day2/activity6.html"><dest>肯尼故事酒店 </dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>8 mins walk</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity7.html"><dest>바농咖啡(針咖啡)/李仲燮街 </dest></a>
+    </td>
+	</tr>
+
+
+
+		 <tr>
+    <td>
+		<distance_up></distance_up>
+
+		<time>4 mis walk</time>
+		<act_points_end></act_points_end>
+		<a href="/activity/day2/activity8.html"><dest>西歸浦每日市場</dest></a>
+    </td>
+	</tr>
+
+
+
+
+</table>
+
+  </main>
+
+</div>
+
+
+
+	<!-- day 3-->
+	<div class="timeit" data-start="2019-07-06 00:00" data-end="2019-07-06 23:59">
+	 <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 3 濟州島 - 西歸浦市</h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+
+	 <tr>
+    <td>
+		<time>04:30</time>
+	<distance_down></distance_down>
+		<hotel_points></hotel_points>
+		<dest>肯尼故事酒店</dest>
+    </td>
+	</tr>
+
+
+  <tr>
+    <td>
+		<distance_up></distance_up>
+		<time>45 mins</time>
+	<distance_down></distance_down>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity1.html"><dest>漢拿山 靈山路線</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>37 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity2.html"><dest>天帝淵瀑布</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>26 mins</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day2/activity3.html"><dest>獨立岩</dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+
+		<time>3 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day2/activity4.html"><dest>新緣橋
+</dest></a>
+    </td>
+	</tr>
+
+
+
+
+
+
+
+</table>
+
+  </main>
+
+</div>
+	<!-- day 4-->
+
+<div class="timeit" data-start="2019-07-07 00:00" data-end="2019-07-07 23:59">
+	  <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 4 濟州島 - 西面</h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+
+	 <tr>
+    <td>
+		<time>04:30</time>
+	<distance_down></distance_down>
+		<hotel_points></hotel_points>
+		<dest>肯尼故事酒店</dest>
+    </td>
+	</tr>
+
+
+  <tr>
+    <td>
+		<distance_up></distance_up>
+		<time>35 mins</time>
+	<distance_down></distance_down>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day4/activity1.html"><dest>柱狀節理帶</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>35 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day4/activity2.html"><dest>龍頭海岸</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>28 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day4/activity3.html"><dest>神話水上樂園</dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>42 mins</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day4/activity4.html"><dest>春日咖啡館
+</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>50 mins</time>
+			<act_points_rev></act_points_rev>
+
+		<a href="/activity/day4/activity4.html"><dest>中央地下街
+</dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>2 mins</time>
+			<food_points_rev></food_points_rev>
+		<a href="/activity/day4/activity4.html"><dest>	黑豬肉一條街
+</dest></a>
+    </td>
+	</tr>
+
+<tr>
+    <td>
+			<distance_up></distance_up>
+
+		<time>35 mins</time>
+		<hotel_points_end></hotel_points_end>
+		<a href="/hotel/hotel3.html"><dest>	龍頭岩海水汗蒸幕
+</dest></a>
+    </td>
+	</tr>
+
+
+
+</table>
+
+  </main>
+</div>
+	<!-- day 5-->
+
+<div class="timeit" data-start="2019-07-08 00:00" data-end="2019-07-08 23:59">
+	  <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 5 釜山 </h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+
+
+
+  <tr>
+    <td>
+		<distance_up></distance_up>
+		<time>35 mins</time>
+	<distance_down></distance_down>
+		<plane_points></plane_points>
+		<a href="/activity/day5.html?act=1"><dest>7C 504</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>1 hr</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day5.html?act=2"><dest>金海國際機場(PSU)</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>30 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/Hotel/hotel4.html"><dest>欣欣酒店</dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>2 mins walk</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day5.html?act=1"><dest>英子麵屋 手工刀切麵
+</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>50 mins</time>
+			<act_points_rev></act_points_rev>
+
+		<a href="/activity/day5.html?act=2"><dest>五六島天空步道
+</dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>41 mins</time>
+			<food_points_rev></food_points_rev>
+		<a href="/activity/day5.html?act=3"><dest>李河榮醬油螃蟹
+</dest></a>
+    </td>
+	</tr>
+
+<tr>
+    <td>
+			<distance_up></distance_up>
+
+		<time>19 mins</time>
+		<act_points_end></act_points_end>
+		<a href="/activity/day5.html?act=4"><dest>大創西面店
+</dest></a>
+    </td>
+	</tr>
+
+
+
+</table>
+
+  </main>
+</div>
+	<!-- day 6-->
+	<div class="timeit" data-start="2019-07-09 00:00" data-end="2019-07-09 23:59">
+	 <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 6 釜山 - 海雲台 </h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+		  <tr>
+    <td>
+
+		<distance_down></distance_down>
+		<time>10:00 AM</time>
+		<hotel_points></hotel_points>
+		<a href="/Hotel/hotel4.html"><dest>欣欣酒店</dest></a>
+    </td>
+	</tr>
+
+
+
+  <tr>
+    <td>
+<distance_up></distance_up>
+		<time>7 mins walk</time>
+	<distance_down></distance_down>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day6.html?act=5"><dest>高峰民飯捲 (고봉민김밥인)</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>45 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day6.html?act=6"><dest>海雲台市場</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>22 mins walk</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day6.html?act=7"><dest>冬柏島步道（동백섬산책로）</dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>24 mins walk</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day6.html?act=8"><dest>海雲台電影街
+</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>29 mins</time>
+			<act_points_rev></act_points_rev>
+
+		<a href="/activity/day6.html?act=9"><dest>新世界百貨 釜山(Spa land)
+</dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>25 mins</time>
+			<food_points_rev></food_points_rev>
+		<a href="/activity/day6.html?act=10"><dest>海雲臺布帳馬車街 (dinner)
+</dest></a>
+    </td>
+	</tr>
+
+<tr>
+    <td>
+			<distance_up></distance_up>
+
+		<time>11 mins walk</time>
+		<act_points_end></act_points_end>
+		<a href="/activity/day6.html?act=11"><dest>釜山版天空之鏡
+</dest></a>
+    </td>
+	</tr>
+
+
+
+</table>
+
+  </main>
+</div>
+	<!-- day 7-->
+
+<div class="timeit" data-start="2019-07-10 00:00" data-end="2019-07-10 23:59">
+	<header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 7 釜山 - 南浦洞 </h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+			  <tr>
+    <td>
+
+		<distance_down></distance_down>
+		<time>10:00 AM</time>
+		<hotel_points></hotel_points>
+		<a href="/Hotel/hotel4.html"><dest>欣欣酒店</dest></a>
+    </td>
+	</tr>
+
+
+
+  <tr>
+    <td>
+
+		<time>10 mins walk</time>
+				<distance_up></distance_up>
+
+	<distance_down></distance_down>
+		<plane_points_rev></plane_points_rev>
+		<a href="/activity/day7.html?act=12"><dest>三珍魚糕／三進魚糕</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>42 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day7.html?act=13"><dest>甘川洞文化村</dest></a>
+    </td>
+	</tr>
+
+
+
+		<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>29 mins</time>
+			<food_points_rev></food_points_rev>
+		<a href="/activity/day7.html?act=17"><dest>影島大橋
+</dest></a>
+    </td>
+	</tr>
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>15 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day7.html?act=14"><dest>BIFF 廣場/南浦洞、光復路地下街</dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>7 mins walk</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day7.html?act=15"><dest>國際市場
+</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>4 mins walk</time>
+			<act_points_rev></act_points_rev>
+
+		<a href="/activity/day7.html?act=16"><dest>富平罐頭市場(lunch)
+</dest></a>
+    </td>
+	</tr>
+
+
+<tr>
+    <td>
+			<distance_up></distance_up>
+					<distance_down></distance_down>
+
+		<time>16 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day7.html?act=38"><dest>樂天百貨 光復店
+</dest></a>
+    </td>
+	</tr>
+
+
+<tr>
+    <td>
+			<distance_up></distance_up>
+				<distance_down></distance_down>
+
+		<time>16 mins walk</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day7.html?act=18"><dest>元祖釜山豬腳
+</dest></a>
+    </td>
+	</tr>
+
+<tr>
+    <td>
+			<distance_up></distance_up>
+							<distance_down></distance_down>
+
+
+		<time>15 mins walk</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day7.html?act=19"><dest>龍頭山公園/釜山塔
+</dest></a>
+    </td>
+	</tr>
+
+				  <tr>
+    <td>
+				<distance_up></distance_up>
+
+		<time>33 mins</time>
+		<hotel_points_end></hotel_points_end>
+		<a href="/Hotel/hotel4.html"><dest>欣欣酒店</dest></a>
+    </td>
+	</tr>
+</table>
+
+  </main>
+
+</div>
+	<!-- day 8-->
+
+<div class="timeit" data-start="2019-07-11 00:00" data-end="2019-07-11 23:59">
+	  <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 8 首爾 </h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+			  <tr>
+    <td>
+
+		<distance_down></distance_down>
+		<time>04:00 AM</time>
+		<hotel_points></hotel_points>
+		<a href="/Hotel/hotel4.html"><dest>欣欣酒店</dest></a>
+    </td>
+	</tr>
+
+
+  <tr>
+    <td>
+		<distance_up></distance_up>
+		<time>30 mins</time>
+	<distance_down></distance_down>
+		<plane_points_rev></plane_points_rev>
+		<a href="/activity/day5.html?act=1"><dest>7C 201 </dest></a>
+    </td>
+	</tr>
+
+
+			  <tr>
+    <td>
+			<distance_up></distance_up>
+
+		<distance_down></distance_down>
+		<time>50 mins</time>
+		<hotel_points_rev></hotel_points_rev>
+		<a href="/Hotel/hotel4.html"><dest>山之屋酒店
+</dest></a>
+    </td>
+	</tr>
+
+
+
+
+  <tr>
+    <td>
+				<distance_up></distance_up>
+		<time>27 mins bus</time>
+	<distance_down></distance_down>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day8.html?act=20"><dest>通仁市場 便當Café</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>37 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day8.html?act=21"><dest>雞肉刀削麵(골목냉면)</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>49 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day8.html?act=22"><dest>SMTOWN@Coex Artium  </dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>33 mins</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day8.html?act=23"><dest>手製印章雕刻體驗課 (1700-1800)
+</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>27 mins</time>
+			<act_points_rev></act_points_rev>
+
+		<a href="/activity/day8.html?act=24"><dest>踩電動滑板車/漢江野餐
+</dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<time>30 mins</time>
+			<food_points_end></food_points_end>
+		<a href="/activity/day8.html?act=25"><dest>南山塔
+</dest></a>
+    </td>
+	</tr>
+
+
+
+
+
+</table>
+
+  </main>
+</div>
+	<!-- day 9-->
+	<div class="timeit" data-start="2019-07-12 00:00" data-end="2019-07-12 23:59">
+	 <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 9 首爾近郊 </h1>
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+
+		  <tr>
+    <td>
+
+		<distance_down></distance_down>
+		<time>07:00 AM</time>
+		<hotel_points></hotel_points>
+		<a href="/Hotel/hotel4.html"><dest>山之屋酒店</dest></a>
+    </td>
+	</tr>
+
+
+  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>10 mins walk</time>
+		<plane_points_rev></plane_points_rev>
+		<a href="/activity/day9.html?act=26"><dest>Isaac Toast </dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>2 hrs</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day9.html?act=27"><dest>南怡島</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>1 hr</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day9.html?act=28"><dest>江村鐵路自行車</dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>2 hrs</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day9.html?act=29"><dest>馬場畜產物市場(韓牛)
+</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>40 mins</time>
+			<act_points_rev></act_points_rev>
+
+		<a href="/activity/day9.html?act=30"><dest>哈莫妮超市
+</dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+
+		<time>2 mins walk</time>
+			<act_points_end></act_points_end>
+		<a href="/activity/day9.html?act=31"><dest>PINK Mart
+</dest></a>
+    </td>
+	</tr>
+
+
+
+
+</table>
+
+  </main>
+
+</div>
+	<!-- day 10-->
+	<div class="timeit" data-start="2019-07-13 00:00" data-end="2019-07-13 23:59">
+
+  <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+    <h1 class="header__title">Day 10 首爾 </h1>
+
+
+  </header>
+
+  <main class="main">
+
+
+<table>
+
+
+
+
+		  <tr>
+    <td>
+
+		<distance_down></distance_down>
+		<time>8:30 AM</time>
+		<hotel_points></hotel_points>
+		<a href="/Hotel/hotel4.html"><dest>山之屋酒店</dest></a>
+    </td>
+	</tr>
+
+
+  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>10 mins walk</time>
+		<plane_points_rev></plane_points_rev>
+		<a href="/activity/day9.html?act=26"><dest>Isaac Toast </dest></a>
+    </td>
+	</tr>
+
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>27 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day10.html?act=33"><dest>Running Man體驗館</dest></a>
+    </td>
+	</tr>
+
+
+	  <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>37 mins</time>
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day10.html?act=34"><dest>弘大商圈+Photobi影證件相 </dest></a>
+    </td>
+	</tr>
+
+
+
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>53 mins</time>
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day10.html?act=35"><dest>하루春日日式炸豬排店
+</dest></a>
+    </td>
+	</tr>
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>52 mins</time>
+			<act_points_rev></act_points_rev>
+
+		<a href="/activity/day10.html?act=36"><dest> 文培洞辣牛肉辣湯刀削麵（龍山店）光洙推薦
+</dest></a>
+    </td>
+	</tr>
+
+
+	<tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>23 mins</time>
+			<food_points_rev></food_points_rev>
+		<a href="/activity/day10.html?act=37"><dest>樂天超市
+</dest></a>
+    </td>
+	</tr>
+
+		  <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>23 mins</time>
+		<hotel_points_rev></hotel_points_rev>
+		<a href="/Hotel/hotel4.html"><dest>山之屋酒店</dest></a>
+    </td>
+	</tr>
+
+<tr>
+    <td>
+			<distance_up></distance_up>
+
+		<time>19 mins walk</time>
+		<plane_points_end></plane_points_end>
+		<a href="/activity/day5.html?act=4"><dest>UO627
+</dest></a>
+    </td>
+	</tr>
+
+
+
+</table>
+
+  </main>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://res.cloudinary.com/vsevolodts/raw/upload/v1503371762/timeit.min.js"></script>
+
+
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+
+
+
+</body>
+</html>

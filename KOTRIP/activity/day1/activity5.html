@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="../../styles/inline.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UK Trip">
+  <link rel="apple-touch-icon" href="../../images/icons/icon-152x152.png">
+  <link href="../../styles/activites.css" rel="stylesheet" type="text/css">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+	
+	
+	
+
+	
+
+	
+	
+<script>  document.addEventListener('DOMContentLoaded', function(event) {
+
+  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
+  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+
+  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+});</script>
+
+
+<style>
+	
+	info_title{
+		position: absolute;
+		left:16px;
+		top:26px;
+		font-size:22px;
+	  font-weight:bold; 
+		
+	}
+	info{
+		
+		position: absolute;
+		left:16px;
+		top:66px;
+		font-size:16px;
+	     
+		text-align: left;
+	}
+	
+	</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="header">
+    <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input type="image" height="30px" src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">東門市場</h1>
+	  <br>
+ <h2 class="flight_number">Activity</h2>
+  </header>
+
+  <main class="main">
+	  
+  <div style="  
+  margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> THUR, 04 JULY
+	
+	  </div>
+
+	  
+	  
+	  <div class="flip-card-3D-wrapper">
+<div id="flip-card">
+	<div class="flip-card-front">  <table>
+
+<tr><td colspan="2" style="padding: 90px;">
+	<activity_title>東門市場</activity_title>
+	<location_logo><img src="/images/location.png"></img></location_logo><location><a href="http://naver.me/5A8TFYGg">제주특별자치도 제주시 일도1동 1476-33</a></location>
+	
+	<phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a>- </a></phone></phone>
+	 
+	  <tube_logo><img src="/images/tube.png"></img></tube_logo><tube><a href="http://naver.me/51J2yyen">제주특별자치도 제주시 일도1동</a></tube>
+	  
+	  </td></tr>
+	
+	
+   <time_tr>
+    <td >
+		<depart>Opening time</depart>
+			<time>00:00</time> 
+		<pm_holder><pm>AM</pm></pm_holder>
+	
+
+	   </td> 
+    <td>
+			<depart>Closing time</depart>
+					<time_holder><time>00:00</time></time_holder> 
+		<pm_holder><pm>PM</pm></pm_holder>
+	
+
+    </td>
+	</time_tr>
+
+
+
+	</table>
+
+<button id="flip-card-btn-turn-to-back">i</button></div>
+
+	<div class="flip-card-back"><info_title>INFO</info_title>
+		
+		
+	 <table>
+
+<tr><td colspan="2" style="padding: 90px;">
+	<activity_title>INFO</activity_title>
+	<location_logo><img src="/images/location.png"></img></location_logo><location><a href="https://goo.gl/maps/egn6ru1Vak12">33°26'15.6"N 126°47'30.2"E</a></location>
+		 <phone_logo><img src="/images/money.png"></img></phone_logo><phone><a> 入場費:免費</a></phone>
+	  <tube_logo><img src="/images/parking.png"></img></tube_logo><tube><a> 停車場: 제일주차빌딩 공영 주차장</a></tube>
+	  
+	  </td></tr>
+	
+	<tr><td>停車場First 30mins free then every 15 mins ₩500</td></tr>
+   
+
+
+	</table>
+	
+		
+		
+		
+		
+		
+		<button id="flip-card-btn-turn-to-front">i</button></div>
+</div>
+</div>
+
+<br>
+<div style="width:100%; height:200px;">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1663.303820920509!2d126.5250661!3d33.5115839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350ce353ff30d105%3A0x3c9a585a805f7cf5!2z5p2x6ZaA5biC5aC0!5e0!3m2!1szh-TW!2suk!4v1551993416071" width="100%" height="200px" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+  </main>
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="../../hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+	
+
+</body>
+</html>

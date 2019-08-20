@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="../styles/inline.css">
+		  <link rel="stylesheet" type="text/css" href="../styles/slider.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UK Trip">
+  <link rel="apple-touch-icon" href="../images/icons/icon-152x152.png">
+  <link href="../styles/activity.css" rel="stylesheet" type="text/css">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<style>  .swiper-container {
+      width: 100%;
+      height: 50%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color:#000;
+      opacity: 1;
+      background: rgba(0,0,0,0.2);
+    }
+    .swiper-pagination-bullet-active {
+      color:#fff;
+      background: #007aff;
+	
+    }
+	
+	
+	
+	info_title{
+		position: absolute;
+		left:16px;
+		top:26px;
+		font-size:22px;
+	  font-weight:bold; 
+	}
+	info{
+		
+		position: absolute;
+		left:16px;
+		top:66px;
+		font-size:16px;
+	     
+		text-align: left;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="../styles/inline.css">
+		  <link rel="stylesheet" type="text/css" href="../styles/slider.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UK Trip">
+  <link rel="apple-touch-icon" href="../images/icons/icon-152x152.png">
+  <link href="../styles/hotel.css" rel="stylesheet" type="text/css">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<style>  .swiper-container {
+      width: 100%;
+      height: 50%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-pagination-bullet {
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 12px;
+      color:#000;
+      opacity: 1;
+      background: rgba(0,0,0,0.2);
+    }
+    .swiper-pagination-bullet-active {
+      color:#fff;
+      background: #007aff;
+	
+    }
+	
+	
+	
+	info_title{
+		position: absolute;
+		left:16px;
+		top:26px;
+		font-size:22px;
+	  font-weight:bold; 
+	}
+	info{
+		
+		position: absolute;
+		left:16px;
+		top:66px;
+		font-size:16px;
+	     
+		text-align: left;
+	}
+	
+	</style>
+
+</head>
+<body>
+
+
+
+ 
+
+ <header class="header">
+    <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input type="image" height ="30px" src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title" style="font-size: 26px;">城山合作城市酒店</h1>
+	  <br>
+ <h2 class="flight_number">Accommodation</h2>
+  </header>
+
+  <main class="main">
+	  
+  <div style="  
+  margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> THUR, 4 JUL
+			  </div>
+<table>
+
+<tr><td colspan="2" style="padding: 90px;">
+	<activity_title style=" width:100%;">城山合作城市酒店 (코업시티호텔 성산)</activity_title>
+	<location_logo><img src="/images/location.png"></img></location_logo><location><a href="http://naver.me/Gzusa65M">제주특별자치도 서귀포시 성산읍 성산리 250</a></location>
+	<gmap_location_logo><img src="/images/location.png"></img></gmap_location_logo><gmap_location><a href="https://goo.gl/maps/zHSf9nCxg9U2">250 Seongsan-ri, Seongsan-eup, Seogwipo, Jeju-do,</a></gmap_location>
+	<phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a href="tel:+82 64 780 9800">+82 64 780 9800</a></phone>
+	
+	  
+	  </td></tr>
+	
+	
+   <time_tr>
+    <td >
+		<depart>Check in time</depart>
+			<time>15:00</time> 
+		
+		
+
+	   </td> 
+    <td>
+			<depart>Check out time</depart>
+					<time_holder><time>11:00</time></time_holder> 
+		
+
+    </td>
+	</time_tr>
+
+
+
+	</table>
+
+<br>
+
+
+<!-- sliderr -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://r-ak.bstatic.com/images/hotel/max1024x768/861/86131976.jpg" style="width: 100%"  />
+</div>
+      <div class="swiper-slide"><img data-u="image" src="https://r-ak.bstatic.com/images/hotel/max1024x768/156/156944784.jpg" style="width: 100%"  />
+</div>
+      <div class="swiper-slide"><img data-u="image" src="https://r-ak.bstatic.com/images/hotel/max1024x768/861/86131969.jpg" style="width: 100%" /></div>
+ 
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  </script>
+		
+<!-- #endregion Jssor Slider End -->
+
+
+
+
+
+
+  </main>
+
+ 
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="../hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+
+</body>
+</html>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+      },
+    });
+  </script>
+		
+<!-- #endregion Jssor Slider End -->
+
+
+
+
+
+
+  </main>
+
+ 
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="../hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+
+</body>
+</html>

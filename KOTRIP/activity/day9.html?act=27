@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="../../styles/inline.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="UK Trip">
+  <link rel="apple-touch-icon" href="../../images/icons/icon-152x152.png">
+  <link href="../../styles/activites.css" rel="stylesheet" type="text/css">
+	
+
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+	
+	
+	
+
+	
+
+	
+	
+<script>  document.addEventListener('DOMContentLoaded', function(event) {
+
+  document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
+  document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+
+  document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+  document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
+  document.getElementById('flip-card').classList.toggle('do-flip');
+  };
+
+});</script>
+
+
+<style>
+	.dynamic-content {
+    display:none;
+}
+	info_title{
+		position: absolute;
+		left:16px;
+		top:26px;
+		font-size:22px;
+	  font-weight:bold; 
+		
+	}
+	info{
+		
+		position: absolute;
+		left:16px;
+		top:66px;
+		font-size:16px;
+	     
+		text-align: left;
+	}
+	
+	</style>
+	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+	// Parse the URL parameter
+	function getParameterByName(name, url) {
+	    if (!url) url = window.location.href;
+	    name = name.replace(/[\[\]]/g, "\\$&");
+	    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+	        results = regex.exec(url);
+	    if (!results) return null;
+	    if (!results[2]) return '';
+	    return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+	// Give the parameter a variable name
+	var dynamicContent = getParameterByName('act');
+ 
+	 $(document).ready(function() {
+ 
+		// Check if the URL parameter is apples
+		if (dynamicContent == '26') {
+			$('#26').show();
+		} 
+		// Check if the URL parameter is oranges
+		else if (dynamicContent == '27') {
+			$('#27').show();
+		} 
+		// Check if the URL parameter is bananas
+		else if (dynamicContent == '28') {
+			$('#28').show();
+		} 
+		 else if (dynamicContent == '29') {
+			$('#29').show();
+		}
+		 else if (dynamicContent == '30') {
+			$('#30').show();
+		}else if (dynamicContent == '31') {
+			$('#31').show();
+		}
+		// Check if the URL parmeter is empty or not defined, display default content
+		else {
+			$('#default-content').show();
+		}
+	});
+</script>
+	
+	
+	
+	
+</head>
+<body>
+
+
+
+<!--Isaac Toast -->
+<div id="26" class="dynamic-content">
+<script> document.addEventListener('DOMContentLoaded', function(event) {
+ document.getElementById('flip-card-btn-turn-to-back26').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-front26').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-back26').onclick = function() {
+ document.getElementById('flip-card26').classList.toggle('do-flip26');
+ };
+ document.getElementById('flip-card-btn-turn-to-front26').onclick = function() {
+ document.getElementById('flip-card26').classList.toggle('do-flip26');
+ };
+});</script>
+<style>
+
+ .flip-card-3D-wrapper26 {
+ width: 100%;
+ padding-bottom:290px;
+ margin-bottom: 15px;
+ position: relative;
+ -o-perspective: 900px;
+ -webkit-perspective: 900px;
+ -ms-perspective: 900px;
+ perspective: 900px;
+
+}
+#flip-card26 {
+ width: 100%; 
+ padding-bottom:290px;
+ text-align: center;
+ position: absolute;
+ -o-transition: all 1s ease-in-out;
+ -webkit-transition: all 1s ease-in-out;
+ -ms-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
+ -o-transform-style: preserve-3d;
+ -webkit-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+.do-flip26 {
+ -o-transform: rotateY(-180deg);
+ -webkit-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back26, #flip-card-btn-turn-to-front26 {
+ position:absolute;
+ font-size:18px;
+ top:24px;
+ right:16px;
+ border:thin solid gray;
+ background: white;
+ width:30px;
+ height:30px;
+ padding: 0;
+ text-align:center; 
+ border-radius:50%;
+}
+#flip-card26 .flip-card-front26, #flip-card26 .flip-card-back26{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ -o-backface-visibility: hidden;
+ -webkit-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ z-index: 2;
+ -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+}
+#flip-card26 .flip-card-front26 {
+ background: lightgreen;
+ border:1px solid grey;
+}
+#flip-card26 .flip-card-back26 {
+ background: white;
+ border: 1px solid grey;
+ -o-transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
+ -ms-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+#flip-card26 .flip-card-front26 p, #flip-card26 .flip-card-back26 p {
+ color: grey; 
+ display: block;
+ position: absolute;
+ top: 40%;
+ width: 100%;
+}
+</style>
+<header class="header">
+ <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input
+type="image" height="30px" src="/images/back-icon.png"/></a></div>
+ <h1 class="header__title">Isaac Toast</h1>
+ <br>
+ <h2 class="flight_number">food</h2>
+ </header>
+ <main class="main">
+
+ <div style="
+ margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> 7/12/2019
+
+ </div>
+
+
+ <div class="flip-card-3D-wrapper26">
+<div id="flip-card26">
+ <div class="flip-card-front26"> <table>
+<tr><td colspan="2" style="padding: 90px;"> 
+ <activity_title>Isaac Toast</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="http://naver.me/xFXeqCWW">서울특별시 중구 퇴계로 105</a></location>
+
+ <phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a
+href="tel:+82 02-752-3002 ">+82 02-752-3002</a></phone></phone>
+
+ <tube_logo><img src="/images/tube.png"></img></tube_logo><tube><a>明洞站 5 號出
+口</a></tube>
+
+ </td></tr>
+
+
+ <time_tr>
+ <td >
+ <depart>Opening time</depart>
+ <time>07:00</time>
+ <pm_holder><pm>AM</pm></pm_holder>
+
+ </td>
+ <td>
+ <depart>Closing time</depart>
+ <time_holder><time>20:00</time></time_holder>
+ <pm_holder><pm>PM</pm></pm_holder>
+
+ </td>
+ </time_tr> 
+ </table>
+<button id="flip-card-btn-turn-to-back26">i</button></div>
+ <div class="flip-card-back26"><info_title>INFO</info_title>
+
+
+ <table>
+<tr><td colspan="2" style="padding: 90px;">
+ <activity_title>INFO</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="https://goo.gl/maps/Y8LneidiJs82">37°33'38.9"N 126°59'00.8"E</a></location>
+ <phone_logo><img src="/images/money.png"></img></phone_logo><phone><a>
+</a></phone>
+ <tube_logo><img src="/images/parking.png"></img></tube_logo><tube><a> </a></tube>
+
+ </td></tr>
+
+
+
+ </table>
+
+
+
+
+
+
+ <button id="flip-card-btn-turn-to-front26">i</button></div>
+</div> 
+</div>
+<br>
+<div style="width:100%; height:200px;">
+ <iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1329.7776456960246!2d126.
+98358946148635!3d37.560668983768565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s
+0x357ca2f121a7aeb3%3A0xb56d354d798c1f16!2sIsaac+Toast+%26+Coffee!5e0!3m2!1szhTW!2suk!4v1553279687077" width="600" height="450" frameborder="0" style="border:0"
+allowfullscreen></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+ </main>
+</div> 
+<!--南怡島 -->
+<div id="27" class="dynamic-content">
+<script> document.addEventListener('DOMContentLoaded', function(event) {
+ document.getElementById('flip-card-btn-turn-to-back27').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-front27').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-back27').onclick = function() {
+ document.getElementById('flip-card27').classList.toggle('do-flip27');
+ };
+ document.getElementById('flip-card-btn-turn-to-front27').onclick = function() {
+ document.getElementById('flip-card27').classList.toggle('do-flip27');
+ };
+});</script>
+<style>
+
+ .flip-card-3D-wrapper27 {
+ width: 100%;
+ padding-bottom:290px;
+ margin-bottom: 15px;
+ position: relative;
+ -o-perspective: 900px;
+ -webkit-perspective: 900px;
+ -ms-perspective: 900px;
+ perspective: 900px;
+
+}
+#flip-card27 {
+ width: 100%; 
+ padding-bottom:290px;
+ text-align: center;
+ position: absolute;
+ -o-transition: all 1s ease-in-out;
+ -webkit-transition: all 1s ease-in-out;
+ -ms-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
+ -o-transform-style: preserve-3d;
+ -webkit-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+.do-flip27 {
+ -o-transform: rotateY(-180deg);
+ -webkit-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back27, #flip-card-btn-turn-to-front27 {
+ position:absolute;
+ font-size:18px;
+ top:24px;
+ right:16px;
+ border:thin solid gray;
+ background: white;
+ width:30px;
+ height:30px;
+ padding: 0;
+ text-align:center; 
+ border-radius:50%;
+}
+#flip-card27 .flip-card-front27, #flip-card27 .flip-card-back27{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ -o-backface-visibility: hidden;
+ -webkit-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ z-index: 2;
+ -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+}
+#flip-card27 .flip-card-front27 {
+ background: lightgreen;
+ border:1px solid grey;
+}
+#flip-card27 .flip-card-back27 {
+ background: white;
+ border: 1px solid grey;
+ -o-transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
+ -ms-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+#flip-card27 .flip-card-front27 p, #flip-card27 .flip-card-back27 p {
+ color: grey; 
+ display: block;
+ position: absolute;
+ top: 40%;
+ width: 100%;
+}
+</style>
+<header class="header">
+ <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input
+type="image" height="30px" src="/images/back-icon.png"/></a></div>
+ <h1 class="header__title">南怡島</h1>
+ <br>
+ <h2 class="flight_number">activity</h2>
+ </header>
+ <main class="main">
+
+ <div style="
+ margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> 7/12/2019
+
+ </div>
+
+
+ <div class="flip-card-3D-wrapper27">
+<div id="flip-card27">
+ <div class="flip-card-front27"> <table>
+<tr><td colspan="2" style="padding: 90px;"> 
+ <activity_title>南怡島</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="http://naver.me/Gx5hbTYF">경기도 가평군 가평읍 북한강변로 1024</a></location>
+
+ <phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a href="tel:-
+">-</a></phone></phone>
+
+ <tube_logo><img src="/images/tube.png"></img></tube_logo><tube><a>加平站 --->加平
+觀光循環巴士</a></tube>
+
+ </td></tr>
+
+
+ <time_tr>
+ <td >
+ <depart>Opening time</depart>
+ <time>09:00</time>
+ <pm_holder><pm>AM</pm></pm_holder>
+
+ </td>
+ <td>
+ <depart>Closing time</depart>
+ <time_holder><time>18:00</time></time_holder>
+ <pm_holder><pm>PM</pm></pm_holder>
+
+ </td>
+ </time_tr> 
+ </table>
+<button id="flip-card-btn-turn-to-back27">i</button></div>
+ <div class="flip-card-back27"><info_title>INFO</info_title>
+
+
+ <table>
+<tr><td colspan="2" style="padding: 90px;">
+ <activity_title>INFO</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="https://goo.gl/maps/QtQ8higWQdB2">37°47'28.6"N 127°31'32.0"E</a></location>
+ <phone_logo><img src="/images/money.png"></img></phone_logo><phone><a>
+</a></phone>
+ <tube_logo><img src="/images/parking.png"></img></tube_logo><tube><a> </a></tube>
+
+ </td></tr>
+
+
+
+ </table>
+
+
+
+
+
+
+ <button id="flip-card-btn-turn-to-front27">i</button></div>
+</div> 
+</div>
+<br>
+<div style="width:100%; height:200px;">
+ <iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.943735965502!2d127.5
+233531146728!3d37.791358318979526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x
+356326e41560af75%3A0xd64aaaa329e7c522!2z5Y2X5oCh5bO2!5e0!3m2!1szhTW!2suk!4v1553279872645" width="600" height="450" frameborder="0" style="border:0"
+allowfullscreen></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+ </main>
+</div> 
+<!--江村鐵路自行車 -->
+<div id="28" class="dynamic-content">
+<script> document.addEventListener('DOMContentLoaded', function(event) {
+ document.getElementById('flip-card-btn-turn-to-back28').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-front28').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-back28').onclick = function() {
+ document.getElementById('flip-card28').classList.toggle('do-flip28');
+ };
+ document.getElementById('flip-card-btn-turn-to-front28').onclick = function() {
+ document.getElementById('flip-card28').classList.toggle('do-flip28');
+ };
+});</script>
+<style>
+
+
+ .flip-card-3D-wrapper28 {
+ width: 100%;
+ padding-bottom:290px;
+ margin-bottom: 15px;
+ position: relative;
+ -o-perspective: 900px;
+ -webkit-perspective: 900px;
+ -ms-perspective: 900px;
+ perspective: 900px;
+
+}
+#flip-card28 {
+ width: 100%; 
+ padding-bottom:290px;
+ text-align: center;
+ position: absolute;
+ -o-transition: all 1s ease-in-out;
+ -webkit-transition: all 1s ease-in-out;
+ -ms-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
+ -o-transform-style: preserve-3d;
+ -webkit-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+.do-flip28 {
+ -o-transform: rotateY(-180deg);
+ -webkit-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back28, #flip-card-btn-turn-to-front28 {
+ position:absolute;
+ font-size:18px;
+ top:24px;
+ right:16px;
+ border:thin solid gray;
+ background: white;
+ width:30px;
+ height:30px;
+ padding: 0;
+ text-align:center; 
+ border-radius:50%;
+}
+#flip-card28 .flip-card-front28, #flip-card28 .flip-card-back28{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ -o-backface-visibility: hidden;
+ -webkit-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ z-index: 2;
+ -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+}
+#flip-card28 .flip-card-front28 {
+ background: lightgreen;
+ border:1px solid grey;
+}
+#flip-card28 .flip-card-back28 {
+ background: white;
+ border: 1px solid grey;
+ -o-transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
+ -ms-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+#flip-card28 .flip-card-front28 p, #flip-card28 .flip-card-back28 p {
+ color: grey; 
+ display: block;
+ position: absolute;
+ top: 40%;
+ width: 100%;
+}
+</style>
+<header class="header">
+ <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input
+type="image" height="30px" src="/images/back-icon.png"/></a></div>
+ <h1 class="header__title">江村鐵路自行車</h1>
+ <br>
+ <h2 class="flight_number">activity</h2>
+ </header>
+ <main class="main">
+
+ <div style="
+ margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> 7/12/2019
+
+ </div>
+
+
+ <div class="flip-card-3D-wrapper28">
+<div id="flip-card28">
+ <div class="flip-card-front28"> <table>
+<tr><td colspan="2" style="padding: 90px;"> 
+ <activity_title>江村鐵路自行車</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="http://naver.me/xhvAunB5">경기도 가평군 가평읍 장터길 14</a></location>
+
+ <phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a
+href="tel:+82-33-245-1000-2 ">+82-33-245-1000-2</a></phone></phone>
+
+ <tube_logo><img src="/images/tube.png"></img></tube_logo><tube><a>金裕貞站
+</a></tube>
+
+ </td></tr>
+
+
+ <time_tr>
+ <td >
+ <depart>Opening time</depart>
+ <time>09:00</time>
+ <pm_holder><pm>AM</pm></pm_holder>
+
+ </td>
+ <td>
+ <depart>Closing time</depart>
+ <time_holder><time>18:00</time></time_holder>
+ <pm_holder><pm>PM</pm></pm_holder>
+
+ </td>
+ </time_tr> 
+ </table>
+<button id="flip-card-btn-turn-to-back28">i</button></div>
+ <div class="flip-card-back28"><info_title>INFO</info_title>
+
+
+ <table>
+<tr><td colspan="2" style="padding: 90px;">
+ <activity_title>INFO</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="https://goo.gl/maps/yTu3HfMMaM62">37°48'56.8"N 127°42'43.5"E</a></location>
+ <phone_logo><img src="/images/money.png"></img></phone_logo><phone><a>
+</a></phone>
+ <tube_logo><img src="/images/parking.png"></img></tube_logo><tube><a> </a></tube>
+
+ </td></tr>
+
+
+
+ </table>
+
+
+
+
+
+
+ <button id="flip-card-btn-turn-to-front28">i</button></div>
+</div> 
+</div>
+<br>
+<div style="width:100%; height:200px;">
+ <iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.9008415055196!2d127.
+70993761467372!3d37.81579151757279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0
+x3562e167d230e79d%3A0x69a795d3a6d2ff96!2z5rGf5p2R6ZC16YGT6Ieq6KGM6LuK!5e0!3m2!1szhTW!2suk!4v1553279926456" width="600" height="450" frameborder="0" style="border:0"
+allowfullscreen></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+ </main>
+</div> 
+<!--馬場畜產物市場(韓牛) -->
+<div id="29" class="dynamic-content">
+<script> document.addEventListener('DOMContentLoaded', function(event) {
+ document.getElementById('flip-card-btn-turn-to-back29').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-front29').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-back29').onclick = function() {
+ document.getElementById('flip-card29').classList.toggle('do-flip29');
+ };
+ document.getElementById('flip-card-btn-turn-to-front29').onclick = function() {
+ document.getElementById('flip-card29').classList.toggle('do-flip29');
+ };
+});</script>
+<style>
+
+ .flip-card-3D-wrapper29 {
+ width: 100%;
+ padding-bottom:290px;
+ margin-bottom: 15px;
+ position: relative;
+ -o-perspective: 900px;
+ -webkit-perspective: 900px;
+ -ms-perspective: 900px;
+ perspective: 900px;
+
+}
+#flip-card29 {
+ width: 100%; 
+ padding-bottom:290px;
+ text-align: center;
+ position: absolute;
+ -o-transition: all 1s ease-in-out;
+ -webkit-transition: all 1s ease-in-out;
+ -ms-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
+ -o-transform-style: preserve-3d;
+ -webkit-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+.do-flip29 {
+ -o-transform: rotateY(-180deg);
+ -webkit-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back29, #flip-card-btn-turn-to-front29 {
+ position:absolute;
+ font-size:18px;
+ top:24px;
+ right:16px;
+ border:thin solid gray;
+ background: white;
+ width:30px;
+ height:30px;
+ padding: 0;
+ text-align:center; 
+ border-radius:50%;
+}
+#flip-card29 .flip-card-front29, #flip-card29 .flip-card-back29{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ -o-backface-visibility: hidden;
+ -webkit-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ z-index: 2;
+ -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+}
+#flip-card29 .flip-card-front29 {
+ background: lightgreen;
+ border:1px solid grey;
+}
+#flip-card29 .flip-card-back29 {
+ background: white;
+ border: 1px solid grey;
+ -o-transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
+ -ms-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+#flip-card29 .flip-card-front29 p, #flip-card29 .flip-card-back29 p {
+ color: grey; 
+ display: block;
+ position: absolute;
+ top: 40%;
+ width: 100%;
+}
+</style>
+<header class="header">
+ <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input
+type="image" height="30px" src="/images/back-icon.png"/></a></div>
+ <h1 class="header__title">馬場畜產物市場(韓牛)</h1>
+ <br>
+ <h2 class="flight_number">food</h2>
+ </header>
+ <main class="main">
+
+ <div style="
+ margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> 7/12/2019
+
+ </div>
+
+
+ <div class="flip-card-3D-wrapper29">
+<div id="flip-card29">
+ <div class="flip-card-front29"> <table>
+<tr><td colspan="2" style="padding: 90px;"> 
+ <activity_title>馬場畜產物市場(韓牛)</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="http://naver.me/57BYLOaH">서울시 성동구 마장로 31 길 40</a></location>
+
+ <phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a
+href="tel:+82 02-2-2281-4446 ">+82 02-2-2281-4446</a></phone></phone>
+
+ <tube_logo><img src="/images/tube.png"></img></tube_logo><tube><a>馬場站 2 號出
+口</a></tube>
+
+ </td></tr>
+
+
+ <time_tr>
+ <td >
+ <depart>Opening time</depart>
+ <time>03:00</time>
+ <pm_holder><pm>AM</pm></pm_holder>
+
+ </td>
+ <td>
+ <depart>Closing time</depart>
+ <time_holder><time>21:00</time></time_holder>
+ <pm_holder><pm>PM</pm></pm_holder>
+
+ </td>
+ </time_tr> 
+ </table>
+<button id="flip-card-btn-turn-to-back29">i</button></div>
+ <div class="flip-card-back29"><info_title>INFO</info_title>
+
+
+ <table>
+<tr><td colspan="2" style="padding: 90px;">
+ <activity_title>INFO</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="https://goo.gl/maps/iVpRGERxR852">37°34'11.2"N 127°02'18.2"E</a></location>
+ <phone_logo><img src="/images/money.png"></img></phone_logo><phone><a>
+</a></phone>
+ <tube_logo><img src="/images/parking.png"></img></tube_logo><tube><a> </a></tube>
+
+ </td></tr>
+
+
+
+ </table>
+
+
+
+
+
+
+ <button id="flip-card-btn-turn-to-front29">i</button></div>
+</div> 
+</div>
+<br>
+<div style="width:100%; height:200px;">
+ <iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.374746082234!2d127.0
+3621211466563!3d37.569792431700535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0
+x357ca32052c7e5fb%3A0x8c3b10e2d893eea6!2sMajang+Meat+Market!5e0!3m2!1szhTW!2suk!4v1553279975916" width="600" height="450" frameborder="0" style="border:0"
+allowfullscreen></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+ </main>
+</div> 
+<!--哈莫妮超市、 (Souvenir Shopping) -->
+<div id="30" class="dynamic-content">
+<script> document.addEventListener('DOMContentLoaded', function(event) {
+ document.getElementById('flip-card-btn-turn-to-back30').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-front30').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-back30').onclick = function() {
+ document.getElementById('flip-card30').classList.toggle('do-flip30');
+ };
+ document.getElementById('flip-card-btn-turn-to-front30').onclick = function() {
+ document.getElementById('flip-card30').classList.toggle('do-flip30');
+ };
+});</script>
+<style>
+
+ .flip-card-3D-wrapper30 {
+ width: 100%;
+ padding-bottom:290px;
+ margin-bottom: 15px;
+ position: relative;
+ -o-perspective: 900px;
+ -webkit-perspective: 900px;
+ -ms-perspective: 900px;
+ perspective: 900px;
+
+}
+#flip-card30 {
+ width: 100%; 
+ padding-bottom:290px;
+ text-align: center;
+ position: absolute;
+ -o-transition: all 1s ease-in-out;
+ -webkit-transition: all 1s ease-in-out;
+ -ms-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
+ -o-transform-style: preserve-3d;
+ -webkit-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+.do-flip30 {
+ -o-transform: rotateY(-180deg);
+ -webkit-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back30, #flip-card-btn-turn-to-front30 {
+ position:absolute;
+ font-size:18px;
+ top:24px;
+ right:16px;
+ border:thin solid gray;
+ background: white;
+ width:30px;
+ height:30px;
+ padding: 0;
+ text-align:center; 
+ border-radius:50%;
+}
+#flip-card30 .flip-card-front30, #flip-card30 .flip-card-back30{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ -o-backface-visibility: hidden;
+ -webkit-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ z-index: 2;
+ -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+}
+#flip-card30 .flip-card-front30 {
+ background: lightgreen;
+ border:1px solid grey;
+}
+#flip-card30 .flip-card-back30 {
+ background: white;
+ border: 1px solid grey;
+ -o-transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
+ -ms-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+#flip-card30 .flip-card-front30 p, #flip-card30 .flip-card-back30 p {
+ color: grey; 
+ display: block;
+ position: absolute;
+ top: 40%;
+ width: 100%;
+}
+</style>
+<header class="header">
+ <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input
+type="image" height="30px" src="/images/back-icon.png"/></a></div>
+ <h1 class="header__title">哈莫妮超市、 (Souvenir Shopping)</h1>
+ <br>
+ <h2 class="flight_number">activity</h2>
+ </header>
+ <main class="main">
+
+ <div style="
+ margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> 7/12/2019
+
+ </div>
+
+
+ <div class="flip-card-3D-wrapper30">
+<div id="flip-card30">
+ <div class="flip-card-front30"> <table>
+<tr><td colspan="2" style="padding: 90px;"> 
+ <activity_title>哈莫妮超市、 (Souvenir Shopping)</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="http://naver.me/FPT1t4NS">서울특별시 중구 명동 8 길 21-7</a></location>
+
+ <phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a
+href="tel:+82 02-776-5696 ">+82 02-776-5696</a></phone></phone>
+
+ <tube_logo><img src="/images/tube.png"></img></tube_logo><tube><a>明洞站 6 號出
+口</a></tube>
+
+ </td></tr>
+
+
+ <time_tr>
+ <td >
+ <depart>Opening time</depart>
+ <time>08:00</time>
+ <pm_holder><pm>AM</pm></pm_holder>
+
+ </td>
+ <td>
+ <depart>Closing time</depart>
+ <time_holder><time>00:00</time></time_holder>
+ <pm_holder><pm>PM</pm></pm_holder>
+
+ </td>
+ </time_tr> 
+ </table>
+<button id="flip-card-btn-turn-to-back30">i</button></div>
+ <div class="flip-card-back30"><info_title>INFO</info_title>
+
+
+ <table>
+<tr><td colspan="2" style="padding: 90px;">
+ <activity_title>INFO</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="https://goo.gl/maps/wiGhCbTpoSK2">37°33'46.2"N 126°59'06.6"E</a></location>
+ <phone_logo><img src="/images/money.png"></img></phone_logo><phone><a>
+</a></phone>
+ <tube_logo><img src="/images/parking.png"></img></tube_logo><tube><a> </a></tube>
+
+ </td></tr>
+
+
+
+ </table>
+
+
+
+
+
+
+ <button id="flip-card-btn-turn-to-front30">i</button></div>
+</div> 
+</div>
+<br>
+<div style="width:100%; height:200px;">
+ <iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.669670321821!2d126.9
+829810146653!3d37.562845732098346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x
+357ca2f015b367a9%3A0x7594cf8966e3f8c9!2sHarmony+Mart!5e0!3m2!1szhTW!2suk!4v1553280038923" width="600" height="450" frameborder="0" style="border:0"
+allowfullscreen></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+ </main>
+</div> 
+<!--PINK Mart -->
+<div id="31" class="dynamic-content">
+<script> document.addEventListener('DOMContentLoaded', function(event) {
+ document.getElementById('flip-card-btn-turn-to-back31').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-front31').style.visibility = 'visible';
+ document.getElementById('flip-card-btn-turn-to-back31').onclick = function() {
+ document.getElementById('flip-card31').classList.toggle('do-flip31');
+ };
+ document.getElementById('flip-card-btn-turn-to-front31').onclick = function() {
+ document.getElementById('flip-card31').classList.toggle('do-flip31');
+ };
+});</script>
+<style>
+
+ .flip-card-3D-wrapper31 {
+ width: 100%;
+ padding-bottom:290px;
+ margin-bottom: 15px;
+ position: relative;
+ -o-perspective: 900px;
+ -webkit-perspective: 900px;
+ -ms-perspective: 900px;
+ perspective: 900px;
+
+}
+#flip-card31 {
+ width: 100%; 
+ padding-bottom:290px;
+ text-align: center;
+ position: absolute;
+ -o-transition: all 1s ease-in-out;
+ -webkit-transition: all 1s ease-in-out;
+ -ms-transition: all 1s ease-in-out;
+ transition: all 1s ease-in-out;
+ -o-transform-style: preserve-3d;
+ -webkit-transform-style: preserve-3d;
+ -ms-transform-style: preserve-3d;
+ transform-style: preserve-3d;
+}
+.do-flip31 {
+ -o-transform: rotateY(-180deg);
+ -webkit-transform: rotateY(-180deg);
+ -ms-transform: rotateY(-180deg);
+ transform: rotateY(-180deg);
+}
+#flip-card-btn-turn-to-back31, #flip-card-btn-turn-to-front31 {
+ position:absolute;
+ font-size:18px;
+ top:24px;
+ right:16px;
+ border:thin solid gray;
+ background: white;
+ width:30px;
+ height:30px;
+ padding: 0;
+ text-align:center; 
+ border-radius:50%;
+}
+#flip-card31 .flip-card-front31, #flip-card31 .flip-card-back31{
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ -o-backface-visibility: hidden;
+ -webkit-backface-visibility: hidden;
+ -ms-backface-visibility: hidden;
+ backface-visibility: hidden;
+ z-index: 2;
+ -webkit-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+ box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
+}
+#flip-card31 .flip-card-front31 {
+ background: lightgreen;
+ border:1px solid grey;
+}
+#flip-card31 .flip-card-back31 {
+ background: white;
+ border: 1px solid grey;
+ -o-transform: rotateY(180deg);
+ -webkit-transform: rotateY(180deg);
+ -ms-transform: rotateY(180deg);
+ transform: rotateY(180deg);
+}
+#flip-card31 .flip-card-front31 p, #flip-card31 .flip-card-back31 p {
+ color: grey; 
+ display: block;
+ position: absolute;
+ top: 40%;
+ width: 100%;
+}
+</style>
+<header class="header">
+ <div style="margin-left: 5px; margin-top: -68px"> <a href="javascript:history.back()"><input
+type="image" height="30px" src="/images/back-icon.png"/></a></div>
+ <h1 class="header__title">PINK Mart</h1>
+ <br>
+ <h2 class="flight_number">activity</h2>
+ </header>
+ <main class="main">
+
+ <div style="
+ margin-left: 20px; margin-bottom:5px; font-size: 13px; font-weight: bold;"> 7/12/2019
+
+ </div>
+
+
+ <div class="flip-card-3D-wrapper31">
+<div id="flip-card31">
+ <div class="flip-card-front31"> <table>
+<tr><td colspan="2" style="padding: 90px;"> 
+ <activity_title>PINK Mart</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="http://naver.me/FLMNiQSs">서울특별시 중구 명동 2 길 57 태평양빌딩
+B1F</a></location>
+
+ <phone_logo><img src="/images/phone.png"></img></phone_logo><phone><a
+href="tel:+8202-777-8833 ">+8202-777-8833</a></phone></phone>
+
+ <tube_logo><img src="/images/tube.png"></img></tube_logo><tube><a>明洞站５號出
+口</a></tube>
+
+ </td></tr>
+
+
+ <time_tr>
+ <td >
+ <depart>Opening time</depart>
+ <time>08:00</time>
+ <pm_holder><pm>AM</pm></pm_holder>
+
+ </td>
+ <td>
+ <depart>Closing time</depart>
+ <time_holder><time>00:00</time></time_holder>
+ <pm_holder><pm>PM</pm></pm_holder>
+
+ </td>
+ </time_tr> 
+ </table>
+<button id="flip-card-btn-turn-to-back31">i</button></div>
+ <div class="flip-card-back31"><info_title>INFO</info_title>
+
+
+ <table>
+<tr><td colspan="2" style="padding: 90px;">
+ <activity_title>INFO</activity_title>
+ <location_logo><img src="/images/location.png"></img></location_logo><location><a
+href="https://goo.gl/maps/MFWivyoLXHs">37°33'39.2"N 126°58'59.9"E</a></location>
+ <phone_logo><img src="/images/money.png"></img></phone_logo><phone><a>
+</a></phone>
+ <tube_logo><img src="/images/parking.png"></img></tube_logo><tube><a> </a></tube>
+
+ </td></tr>
+
+
+
+ </table>
+
+
+
+
+
+
+ <button id="flip-card-btn-turn-to-front31">i</button></div> 
+</div>
+</div>
+<br>
+<div style="width:100%; height:200px;">
+ <iframe
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7522120817084!2d126.
+98112641466531!3d37.56090133220978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0
+x357ca30786af13c7%3A0xe7d1b73f416a234a!2sPINK+MART!5e0!3m2!1szhTW!2suk!4v1553280105360" width="600" height="450" frameborder="0" style="border:0"
+allowfullscreen></iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+ </main>
+</div> 
+
+
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="../../hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+	
+
+</body>
+</html>

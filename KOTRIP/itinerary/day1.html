@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <title>Itinerary</title>
+  <link rel="stylesheet" type="text/css" href="../styles/inline.css">
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- TODO add manifest here -->
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KO Trip">
+  <link rel="apple-touch-icon" href="../images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+
+	<style>
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 96%;
+	width: 100%;}
+	time{   position: absolute; top: 32px;
+  left: 20px;
+  width: 100px;
+  height: 20px;
+  }
+	dest{position: absolute; top: 25px;
+  left: 220px;
+  width: 160px;
+  height: 20px;
+ }
+		plane_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+		  
+ 
+		background: url("/images/plane_points.png") center center no-repeat;}
+		
+		act_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+		  
+ 
+		background: url("/images/act_points.png") center center no-repeat;}
+			transport_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+		  
+ 
+		background: url("/images/transpoort_points.png") center center no-repeat;}
+					food_points{position: absolute; top: 20px;
+  left: 100px;
+  width: 50px;
+  height: 70px;
+		  
+ 
+		background: url("/images/food_points.png") center center no-repeat;}
+		
+				act_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/act_points_rev.png") center center no-repeat;}
+		
+					plane_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/plane_points_rev.png") center center no-repeat;}
+					transport_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/transport_points_rev.png") center center no-repeat;}
+		
+		food_points_rev{position: absolute; top: 0px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/food_points_rev.png") center center no-repeat;}
+		
+		
+					plane_points_end{position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/act_point_end.png") center center no-repeat;}
+					transport_points_end{position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/act_point_end.png") center center no-repeat;}
+
+					act_points_end{position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/act_point_end.png") center center no-repeat;}
+	
+		food_points_end{
+			
+			position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/food_point_end.png") center center no-repeat;
+			
+			
+		}
+		
+		
+			hotel_points_end{
+			
+			position: absolute; top: -12px;
+  left: 85px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/hotel_end.png") center center no-repeat;
+			
+			
+		}
+		
+		
+		
+   distance_up{
+			
+			position: absolute; top: -32px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/distance_down3.png") center center no-repeat;
+			
+			
+		}
+		distance_down{
+			
+			position: absolute; top: 32px;
+  left: 0px;
+  width: 80px;
+  height: 80px;
+		  
+ 
+		background: url("/images/distance_down2.png") center center no-repeat;
+			
+			
+		}
+		
+
+dot {
+    display: block;
+	
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 100%;
+  background: rgba(255,255,255,0.7);
+  box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 10px 2px rgba(0,255,135,0.3);
+  -webkit-animation: pulse 1s alternate infinite;
+  -moz-animation: pulse 1s alternate infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    background: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 5px 2px rgba(0,255,135,0.3);
+  }
+  100% {
+    background: rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 15px 2px rgba(0,255,135,1);
+  }
+}
+  
+@-moz-keyframes pulse {
+  0% {
+    background: rgba(255,255,255,0.3);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 5px 2px rgba(0,255,135,0.3);
+  }
+  100% {
+    background: rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 10px 2px rgba(0,255,182,0.5),
+                      0px 0px 15px 2px rgba(0,255,135,1);
+  }
+}
+		
+		
+		
+		
+		
+	</style>
+</head>
+<body>
+
+  <header class="header">
+	 <div style="margin-left: 5px; margin-top: 2px"> <a href="javascript:history.back()"><input type="image" height="30px"  src="/images/back-icon.png"/></a></div>
+
+    <h1 class="header__title">Day 1 濟州島 - 濟州市</h1>
+ 
+  </header>
+
+  <main class="main">
+	  
+  
+<table>
+
+  <tr>
+    <td>
+		<time>06:20</time>  
+	<distance_down></distance_down>
+		<plane_points></plane_points>
+		<a href="/hk_flight_1.html"><dest>Arriving Jeju</dest></a>
+    </td>
+	</tr>
+   <tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>10 mins</time>  
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity1.html"><dest>龍頭岩(용두암)</dest></a>
+    </td>
+	</tr>
+	
+	 <tr>
+    <td>
+			<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>13 mins</time>  
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day1/activity2.html"><dest>Running Man豬肉湯麵</dest></a>
+    </td>
+	</tr>
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>32 mins</time>  
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity3.html"><dest>思連伊林蔭道</dest></a>
+    </td>
+	</tr>
+	
+	
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>27 mins</time>  
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity4.html"><dest>백약이 오름</dest></a>
+    </td>
+	</tr>
+	
+	
+		 <tr>
+    <td> 
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>40 mis</time>  
+		<food_points_rev></food_points_rev>
+		<a href="/activity/day1/activity5.html"><dest>東門市場</dest></a>
+    </td>
+	</tr>
+
+		<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>54 mins</time>  
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity6.html"><dest>月汀里</dest></a>
+    </td>
+	</tr>
+	
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		<distance_down></distance_down>
+		<time>8 mins</time>  
+		<act_points_rev></act_points_rev>
+		<a href="/activity/day1/activity7.html"><dest>萬丈窟</dest></a>
+    </td>
+	</tr>
+	
+	<tr>
+    <td>
+		<distance_up></distance_up>
+		
+		<time>35 mins</time>  
+		<hotel_points_end></hotel_points_end>
+		<a href="/Hotel/hotel1.html"><dest>城山合作城市酒店</dest></a>
+    </td>
+	</tr>
+</table>
+
+  </main>
+
+ </body>
+
+
+
+	<div class="navbar">
+		<a href="/index.html"><input type="image" height="40px"  src="/images/home.png"/></a>
+ 	<a href="/itinerary.html"><input type="image" height="40px"  src="/images/itinerary.png" /></a>
+  	<a href="../hotel.html"><input type="image" height="40px"  src="/images/hotel.png" /></a>
+</div>
+	
+
+
+
+</html>
